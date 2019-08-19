@@ -48,7 +48,7 @@
 				<input id="q1" type="text" size="18">
 				<label id="tick1"></label>
 				<br/>
-				<input type="button" value="Submit" onclick="f1()">
+				<input type="button" id="bb1" value="Submit" onclick="f1()">
 				<br/>
 				<label>签名：</label><label id="sign1"></label>
 				<input id="s1" type="text" size="10">
@@ -62,7 +62,7 @@
 				<input id="q2" type="text" size="18">
 				<label id="tick2"></label>
 				<br/>
-				<input type="button" value="Submit" onclick="f2()">
+				<input type="button" id="bb2" value="Submit" onclick="f2()">
 				<br/>
 				<label>签名：</label><label id="sign2"></label>
 				<input id="s2" type="text" size="10">
@@ -76,7 +76,7 @@
 				<input id="q3" type="text" size="18">
 				<label id="tick3"></label>
 				<br/>
-				<input type="button" value="Submit" onclick="f3()">
+				<input type="button" id="bb3" value="Submit" onclick="f3()">
 				<br/>
 				<label>签名：</label><label id="sign3"></label>
 				<input id="s3" type="text" size="10">
@@ -92,7 +92,7 @@
 				<input id="q4" type="text" size="18">
 				<label id="tick4"></label>
 				<br/>
-				<input type="button" value="Submit" onclick="f4()">
+				<input type="button" id="bb4" value="Submit" onclick="f4()">
 				<br/>
 				<label>签名：</label><label id="sign4"></label>
 				<input id="s4" type="text" size="10">
@@ -106,7 +106,7 @@
 				<input id="q5" type="text" size="18">
 				<label id="tick5"></label>
 				<br/>
-				<input type="button" value="Submit" onclick="f5()">
+				<input type="button" id="bb5" value="Submit" onclick="f5()">
 				<br/>
 				<label>签名：</label><label id="sign5"></label>
 				<input id="s5" type="text" size="10">
@@ -120,7 +120,7 @@
 				<input id="q6" type="text" size="18">
 				<label id="tick6"></label>
 				<br/>
-				<input type="button" value="Submit" onclick="f6()">
+				<input type="button" id="bb6" value="Submit" onclick="f6()">
 				<br/>
 				<label>签名：</label><label id="sign6"></label>
 				<input id="s6" type="text" size="10">
@@ -136,7 +136,7 @@
 				<input id="q7" type="text" size="18">
 				<label id="tick7"></label>
 				<br/>
-				<input type="button" value="Submit" onclick="f7()">
+				<input type="button" id="bb7" value="Submit" onclick="f7()">
 				<br/>
 				<label>签名：</label><label id="sign7"></label>
 				<input id="s7" type="text" size="10">
@@ -150,7 +150,7 @@
 				<input id="q8" type="text" size="18">
 				<label id="tick8"></label>
 				<br/>
-				<input type="button" value="Submit" onclick="f8()">
+				<input type="button" id="bb8" value="Submit" onclick="f8()">
 				<br/>
 				<label>签名：</label><label id="sign8"></label>
 				<input id="s8" type="text" size="10">
@@ -164,7 +164,7 @@
 				<input id="q9" type="text" size="18">
 				<label id="tick9"></label>
 				<br/>
-				<input type="button" value="Submit" onclick="f9()">
+				<input type="button" id="bb9" value="Submit" onclick="f9()">
 				<br/>
 				<label>签名：</label><label id="sign9"></label>
 				<input id="s9" type="text" size="10">
@@ -191,6 +191,7 @@
 function f1() {
   document.getElementById("q1").readOnly = true;
   document.getElementById('tick1').innerHTML = '&#9989;';
+  document.getElementById("bb1").style.display = 'none';
 }
 function s1(){
   document.getElementById('s1').style.display = 'none';
@@ -201,6 +202,7 @@ function s1(){
 function f2() {
   document.getElementById("q2").readOnly = true;
   document.getElementById('tick2').innerHTML = '&#9989;';
+  document.getElementById("bb2").style.display = 'none';
 }
 function s2(){
   document.getElementById('s2').style.display = 'none';
@@ -211,6 +213,7 @@ function s2(){
 function f3() {
   document.getElementById("q3").readOnly = true;
   document.getElementById('tick3').innerHTML = '&#9989;';
+  document.getElementById("bb3").style.display = 'none';
 }
 function s3(){
   document.getElementById('s3').style.display = 'none';
@@ -221,6 +224,7 @@ function s3(){
 function f4() {
   document.getElementById("q4").readOnly = true;
   document.getElementById('tick4').innerHTML = '&#9989;';
+  document.getElementById("bb4").style.display = 'none';
 }
 function s4(){
   document.getElementById('s4').style.display = 'none';
@@ -231,6 +235,7 @@ function s4(){
 function f5() {
   document.getElementById("q5").readOnly = true;
   document.getElementById('tick5').innerHTML = '&#9989;';
+  document.getElementById("bb5").style.display = 'none';
 }
 function s5(){
   document.getElementById('s5').style.display = 'none';
@@ -241,6 +246,7 @@ function s5(){
 function f6() {
   document.getElementById("q6").readOnly = true;
   document.getElementById('tick6').innerHTML = '&#9989;';
+  document.getElementById("bb6").style.display = 'none';
 }
 function s6(){
   document.getElementById('s6').style.display = 'none';
@@ -251,6 +257,7 @@ function s6(){
 function f7() {
   document.getElementById("q7").readOnly = true;
   document.getElementById('tick7').innerHTML = '&#9989;';
+  document.getElementById("bb7").style.display = 'none';
 }
 function s7(){
   document.getElementById('s7').style.display = 'none';
@@ -261,6 +268,7 @@ function s7(){
 function f8() {
   document.getElementById("q8").readOnly = true;
   document.getElementById('tick8').innerHTML = '&#9989;';
+  document.getElementById("bb8").style.display = 'none';
 }
 function s8(){
   document.getElementById('s8').style.display = 'none';
@@ -271,6 +279,7 @@ function s8(){
 function f9() {
   document.getElementById("q9").readOnly = true;
   document.getElementById('tick9').innerHTML = '&#9989;';
+  document.getElementById("bb9").style.display = 'none';
 }
 function s9(){
   document.getElementById('s9').style.display = 'none';
