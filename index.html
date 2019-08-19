@@ -31,85 +31,153 @@
 	<div class="container">
 		<div class="blurb">
 			<h1>欢迎来到团契</h1>
-			<h2>賓果遊戲 （對對看）</h2>
+			<h2>對對看</h2>
 			<h3>目的：互相認識 </h3>
 			<p>內容： <br/>
-			內有9個問題，每人先在每一格裡寫下自己的答案 <br/>
+			內有9個問題，每人先在每一格裡寫下自己的答案 submit后会有&#9989; 在旁边没得更改答案<br/>
 			等宣佈開始後，去找每一格子和自己答案一樣的人，請他們在你的紙格子上簽名 <br/>
 			得到越多人的簽名越好（每一格只需一個簽名就好） <br/>
-			得到最多簽名的人就贏；取前三名，報告你自己的格子的答案和簽名的名字是誰</p>
+			得到最多簽名的人就贏；取前5名，報告你自己的格子的答案和簽名的名字是誰</p>
 		</div><!-- /.blurb -->
 	</div><!-- /.container -->
 	<table>
-	  <tr>
-	    <td>
-	    <label>问题1：喜欢的食物</label>
-	    <br/>
-	    <input id="q1" type="text" size="15"><label id="tick1"></label> 		<br/>
-	    <input type="button" value="Submit" onclick="f1()">
-		</td>
-	    <td>
-	    <label>问题2：喜歡的飲料</label>
-	    <br/>
-	    <input id="q2" type="text" size="15"><label id="tick2"></label> 		<br/>
-	    <input type="button" value="Submit" onclick="f2()">
-		</td>
-	    <td>
-	    <label>问题3：喜歡吃的水果</label>
-	    <br/>
-	    <input id="q3" type="text" size="15"><label id="tick3"></label> 		<br/>
-	    <input type="button" value="Submit" onclick="f3()">
-		</td>
-	    <td>
-	  </tr>
-	  <tr>
-	    <td>
-	    <label>问题4：喜欢的运动</label>
-	    <br/>
-	    <input id="q4" type="text" size="15"><label id="tick4"></label> 		<br/>
-	    <input type="button" value="Submit" onclick="f4()">
-		</td>
-	    <td>
-	    <label>问题5：喜欢的颜色</label>
-	    <br/>
-	    <input id="q5" type="text" size="15"><label id="tick5"></label> 		<br/>
-	    <input type="button" value="Submit" onclick="f5()">
-		</td>
-	    <td>
-	    <label>问题6：想去的地方</label>
-	    <br/>
-	    <input id="q6" type="text" size="15"><label id="tick6"></label> 		<br/>
-	    <input type="button" value="Submit" onclick="f6()">
-		</td>
-	  </tr>
-	  <tr>
-	    <td>
-	    <label>问题7：家里有几个兄弟姐妹（不包括你）</label>
-	    <br/>
-	    <input id="q7" type="text" size="15"><label id="tick7"></label> 		<br/>
-	    <input type="button" value="Submit" onclick="f7()">
-		</td>
-	    <td>
-	    <label>问题8：</label>
-	    <br/>
-	    <input id="q8" type="text" size="15"><label id="tick8"></label> 		<br/>
-	    <input type="button" value="Submit" onclick="f8()">
-		</td>
-	    <td>
-	    <label>问题9：</label>
-	    <br/>
-	    <input id="q9" type="text" size="15"><label id="tick9"></label> 		<br/>
-	    <input type="button" value="Submit" onclick="f9()">
-		</td>
-	  </tr>
+		<tr>
+			<td>
+				<label>问题1：喜欢的食物</label>
+				<br/>
+				<input id="q1" type="text" size="15">
+				<label id="tick1"></label>
+				<br/>
+				<input type="button" value="Submit" onclick="f1()">
+				<br/>
+				<label>签名：</label><label id="sign1"></label>
+				<input id="s1" type="text" size="10">
+				<br/>
+				<input type="button" id="b1" value="Sign" onclick="s1()">
+				<br/>
+			</td>
+			<td>
+				<label>问题2：喜歡的飲料</label>
+				<br/>
+				<input id="q2" type="text" size="15">
+				<label id="tick2"></label>
+				<br/>
+				<input type="button" value="Submit" onclick="f2()">
+				<br/>
+				<label>签名：</label><label id="sign2"></label>
+				<input id="s2" type="text" size="10">
+				<br/>
+				<input type="button" id="b2" value="Sign" onclick="s2()">
+				<br/>
+			</td>
+			<td>
+				<label>问题3：喜歡吃的水果</label>
+				<br/>
+				<input id="q3" type="text" size="15">
+				<label id="tick3"></label>
+				<br/>
+				<input type="button" value="Submit" onclick="f3()">
+				<br/>
+				<label>签名：</label><label id="sign3"></label>
+				<input id="s3" type="text" size="10">
+				<br/>
+				<input type="button" id="b3" value="Sign" onclick="s3()">
+				<br/>
+			</td>
+			<td>
+				<label>问题4：喜欢的运动</label>
+				<br/>
+				<input id="q4" type="text" size="15">
+				<label id="tick4"></label>
+				<br/>
+				<input type="button" value="Submit" onclick="f4()">
+				<br/>
+				<label>签名：</label><label id="sign4"></label>
+				<input id="s4" type="text" size="10">
+				<br/>
+				<input type="button" id="b4" value="Sign" onclick="s4()">
+				<br/>
+			</td>
+			<td>
+				<label>问题5：喜欢的颜色</label>
+				<br/>
+				<input id="q5" type="text" size="15">
+				<label id="tick5"></label>
+				<br/>
+				<input type="button" value="Submit" onclick="f5()">
+				<br/>
+				<label>签名：</label><label id="sign5"></label>
+				<input id="s5" type="text" size="10">
+				<br/>
+				<input type="button" id="b5" value="Sign" onclick="s5()">
+				<br/>
+			</td>
+			<td>
+				<label>问题6：想去的地方</label>
+				<br/>
+				<input id="q6" type="text" size="15">
+				<label id="tick6"></label>
+				<br/>
+				<input type="button" value="Submit" onclick="f6()">
+				<br/>
+				<label>签名：</label><label id="sign6"></label>
+				<input id="s6" type="text" size="10">
+				<br/>
+				<input type="button" id="b6" value="Sign" onclick="s6()">
+				<br/>
+			</td>
+			<td>
+				<label>问题7：家里有几个兄弟姐妹（不包括你）</label>
+				<br/>
+				<input id="q7" type="text" size="15">
+				<label id="tick7"></label>
+				<br/>
+				<input type="button" value="Submit" onclick="f7()">
+				<br/>
+				<label>签名：</label><label id="sign1"></label>
+				<input id="s7" type="text" size="10">
+				<br/>
+				<input type="button" id="b7" value="Sign" onclick="s7()">
+				<br/>
+			</td>
+			<td>
+				<label>问题8：你的长处</label>
+				<br/>
+				<input id="q8" type="text" size="15">
+				<label id="tick8"></label>
+				<br/>
+				<input type="button" value="Submit" onclick="f8()">
+				<br/>
+				<label>签名：</label><label id="sign8"></label>
+				<input id="s8" type="text" size="10">
+				<br/>
+				<input type="button" id="b8" value="Sign" onclick="s8()">
+				<br/>
+			</td>
+			<td>
+				<label>问题9：你目前的烦恼</label>
+				<br/>
+				<input id="q9" type="text" size="15">
+				<label id="tick9"></label>
+				<br/>
+				<input type="button" value="Submit" onclick="f9()">
+				<br/>
+				<label>签名：</label><label id="sign9"></label>
+				<input id="s9" type="text" size="10">
+				<br/>
+				<input type="button" id="b9" value="Sign" onclick="s9()">
+				<br/>
+			</td>
+		</tr>
 	</table>
 	
 	<footer>
 		<h4>
-		凡所祷告祈求的，无论是什么，只要信是得着的，就必得着
+		大专生FINAL加油 社会人工作加油 把一切交托给主
 		</h4>
 		<h4>
-		各位FINAL加油 工作加油 耶稣爱你
+		凡所祷告祈求的，无论是什么，只要信是得着的，就必得着 <br/>
+		“你们奉我的名无论求什么，我必成就，叫父因儿子的荣耀。”（约14:13）
 		</h4>
 	</footer>
 
@@ -119,38 +187,92 @@ function f1() {
   document.getElementById("q1").readOnly = true;
   document.getElementById('tick1').innerHTML = '&#9989;';
 }
+function s1(){
+  document.getElementById('s1').style.display = 'none';
+  document.getElementById('b1').style.display = 'none';
+  document.getElementById('sign1').innerHTML = document.getElementById("s1").value;
+}
+	
 function f2() {
   document.getElementById("q2").readOnly = true;
   document.getElementById('tick2').innerHTML = '&#9989;';
 }
+function s2(){
+  document.getElementById('s2').style.display = 'none';
+  document.getElementById('b2').style.display = 'none';
+  document.getElementById('sign2').innerHTML = document.getElementById("s2").value;
+}
+	
 function f3() {
   document.getElementById("q3").readOnly = true;
   document.getElementById('tick3').innerHTML = '&#9989;';
 }
+function s3(){
+  document.getElementById('s3').style.display = 'none';
+  document.getElementById('b3').style.display = 'none';
+  document.getElementById('sign3').innerHTML = document.getElementById("s3").value;
+}
+	
 function f4() {
   document.getElementById("q4").readOnly = true;
   document.getElementById('tick4').innerHTML = '&#9989;';
 }
+function s4(){
+  document.getElementById('s4').style.display = 'none';
+  document.getElementById('b4').style.display = 'none';
+  document.getElementById('sign4').innerHTML = document.getElementById("s4").value;
+}
+	
 function f5() {
   document.getElementById("q5").readOnly = true;
   document.getElementById('tick5').innerHTML = '&#9989;';
 }
+function s5(){
+  document.getElementById('s5').style.display = 'none';
+  document.getElementById('b5').style.display = 'none';
+  document.getElementById('sign5').innerHTML = document.getElementById("s5").value;
+}
+	
 function f6() {
   document.getElementById("q6").readOnly = true;
   document.getElementById('tick6').innerHTML = '&#9989;';
 }
+function s6(){
+  document.getElementById('s6').style.display = 'none';
+  document.getElementById('b6').style.display = 'none';
+  document.getElementById('sign6').innerHTML = document.getElementById("s6").value;
+}
+	
 function f7() {
   document.getElementById("q7").readOnly = true;
   document.getElementById('tick7').innerHTML = '&#9989;';
 }
+function s7(){
+  document.getElementById('s7').style.display = 'none';
+  document.getElementById('b7').style.display = 'none';
+  document.getElementById('sign7').innerHTML = document.getElementById("s7").value;
+}
+	
 function f8() {
   document.getElementById("q8").readOnly = true;
   document.getElementById('tick8').innerHTML = '&#9989;';
 }
+function s8(){
+  document.getElementById('s8').style.display = 'none';
+  document.getElementById('b8').style.display = 'none';
+  document.getElementById('sign8').innerHTML = document.getElementById("s8").value;
+}
+	
 function f9() {
   document.getElementById("q9").readOnly = true;
   document.getElementById('tick9').innerHTML = '&#9989;';
 }
+function s9(){
+  document.getElementById('s9').style.display = 'none';
+  document.getElementById('b9').style.display = 'none';
+  document.getElementById('sign9').innerHTML = document.getElementById("s9").value;
+}
+	
 </script>
 
 </body>
