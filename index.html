@@ -15,7 +15,7 @@
 	      border: 1px solid #dddddd;
 	      text-align: left;
 	      padding: 8px;
-	      width:400px;
+	      width:300px;
 	      !--height:200px;
 	    }
 
@@ -45,7 +45,7 @@
 			<td>
 				<label>问题1：喜欢的食物</label>
 				<br/>
-				<input id="q1" type="text" size="15">
+				<input id="q1" type="text" size="18">
 				<label id="tick1"></label>
 				<br/>
 				<input type="button" value="Submit" onclick="f1()">
@@ -59,7 +59,7 @@
 			<td>
 				<label>问题2：喜歡的飲料</label>
 				<br/>
-				<input id="q2" type="text" size="15">
+				<input id="q2" type="text" size="18">
 				<label id="tick2"></label>
 				<br/>
 				<input type="button" value="Submit" onclick="f2()">
@@ -73,7 +73,7 @@
 			<td>
 				<label>问题3：喜歡吃的水果</label>
 				<br/>
-				<input id="q3" type="text" size="15">
+				<input id="q3" type="text" size="18">
 				<label id="tick3"></label>
 				<br/>
 				<input type="button" value="Submit" onclick="f3()">
@@ -89,7 +89,7 @@
 			<td>
 				<label>问题4：喜欢的运动</label>
 				<br/>
-				<input id="q4" type="text" size="15">
+				<input id="q4" type="text" size="18">
 				<label id="tick4"></label>
 				<br/>
 				<input type="button" value="Submit" onclick="f4()">
@@ -103,7 +103,7 @@
 			<td>
 				<label>问题5：喜欢的颜色</label>
 				<br/>
-				<input id="q5" type="text" size="15">
+				<input id="q5" type="text" size="18">
 				<label id="tick5"></label>
 				<br/>
 				<input type="button" value="Submit" onclick="f5()">
@@ -117,7 +117,7 @@
 			<td>
 				<label>问题6：想去的地方</label>
 				<br/>
-				<input id="q6" type="text" size="15">
+				<input id="q6" type="text" size="18">
 				<label id="tick6"></label>
 				<br/>
 				<input type="button" value="Submit" onclick="f6()">
@@ -133,7 +133,7 @@
 			<td>
 				<label>问题7：家里有几个兄弟姐妹（不包括你）</label>
 				<br/>
-				<input id="q7" type="text" size="15">
+				<input id="q7" type="text" size="18">
 				<label id="tick7"></label>
 				<br/>
 				<input type="button" value="Submit" onclick="f7()">
@@ -147,7 +147,7 @@
 			<td>
 				<label>问题8：你的长处</label>
 				<br/>
-				<input id="q8" type="text" size="15">
+				<input id="q8" type="text" size="18">
 				<label id="tick8"></label>
 				<br/>
 				<input type="button" value="Submit" onclick="f8()">
@@ -161,7 +161,7 @@
 			<td>
 				<label>问题9：你目前的烦恼</label>
 				<br/>
-				<input id="q9" type="text" size="15">
+				<input id="q9" type="text" size="18">
 				<label id="tick9"></label>
 				<br/>
 				<input type="button" value="Submit" onclick="f9()">
@@ -279,7 +279,8 @@ function s9(){
 }
 	
 function end(){
- document.getElementById('end').style.display = 'block';
+ document.getElementById('footer').style.display = 'block';
+ document.getElementById('end').style.display = 'none';
 }
 </script>
 
