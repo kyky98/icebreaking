@@ -84,6 +84,8 @@
 				<input type="button" id="b3" value="Sign" onclick="s3()">
 				<br/>
 			</td>
+		</tr>
+		<tr>
 			<td>
 				<label>问题4：喜欢的运动</label>
 				<br/>
@@ -126,6 +128,8 @@
 				<input type="button" id="b6" value="Sign" onclick="s6()">
 				<br/>
 			</td>
+		</tr>
+		<tr>
 			<td>
 				<label>问题7：家里有几个兄弟姐妹（不包括你）</label>
 				<br/>
@@ -171,7 +175,8 @@
 		</tr>
 	</table>
 	
-	<footer>
+	<input type="button" id="end" value="谢谢参与，结束后才要按我&#128540;" onclick="end()">
+	<footer id="footer" style="display:none">
 		<h4>
 		大专生FINAL加油 社会人工作加油 把一切交托给主
 		</h4>
@@ -273,6 +278,9 @@ function s9(){
   document.getElementById('sign9').innerHTML = document.getElementById("s9").value;
 }
 	
+function end(){
+ document.getElementById('end').style.display = 'block';
+}
 </script>
 
 </body>
