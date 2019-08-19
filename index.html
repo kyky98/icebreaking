@@ -1,95 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Church Ice Breaking</title>
+	<!-- link to main stylesheet -->
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<style>
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
+	    table {
+	      font-family: arial, sans-serif;
+	      border-collapse: collapse;
+	      width: 100%;
+	    }
 
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-      width:500px;
-      !--height:200px;
-    }
-    
-    input[type=button]{
-    	margin:5px 0px;
-    }
-    input[type=text]{
-    	margin:5px 0px;
-    }
+	    td, th {
+	      border: 1px solid #dddddd;
+	      text-align: left;
+	      padding: 8px;
+	      width:500px;
+	      !--height:200px;
+	    }
 
-</style>
+	    input[type=button]{
+		margin:5px 0px;
+	    }
+	    input[type=text]{
+		margin:5px 0px;
+	    }
+	</style>
 </head>
 <body>
-
-<table>
-  <tr>
-    <td>
-    <label>问题1：</label>
-    <br/>
-    <input id="q1" type="text" size="15"><label id="tick1"></label> 		<br/>
-    <input type="button" value="Submit" onclick="f1()">
-	</td>
-    <td>
-    <label>问题2：</label>
-    <br/>
-    <input id="q2" type="text" size="15"><label id="tick2"></label> 		<br/>
-    <input type="button" value="Submit" onclick="f2()">
-	</td>
-    <td>
-    <label>问题3：</label>
-    <br/>
-    <input id="q3" type="text" size="15"><label id="tick3"></label> 		<br/>
-    <input type="button" value="Submit" onclick="f3()">
-	</td>
-    <td>
-  </tr>
-  <tr>
-    <td>
-    <label>问题4：</label>
-    <br/>
-    <input id="q4" type="text" size="15"><label id="tick4"></label> 		<br/>
-    <input type="button" value="Submit" onclick="f4()">
-	</td>
-    <td>
-    <label>问题5：</label>
-    <br/>
-    <input id="q5" type="text" size="15"><label id="tick5"></label> 		<br/>
-    <input type="button" value="Submit" onclick="f5()">
-	</td>
-    <td>
-    <label>问题6：</label>
-    <br/>
-    <input id="q6" type="text" size="15"><label id="tick6"></label> 		<br/>
-    <input type="button" value="Submit" onclick="f6()">
-	</td>
-  </tr>
-  <tr>
-    <td>
-    <label>问题7：</label>
-    <br/>
-    <input id="q7" type="text" size="15"><label id="tick7"></label> 		<br/>
-    <input type="button" value="Submit" onclick="f7()">
-	</td>
-    <td>
-    <label>问题8：</label>
-    <br/>
-    <input id="q8" type="text" size="15"><label id="tick8"></label> 		<br/>
-    <input type="button" value="Submit" onclick="f8()">
-	</td>
-    <td>
-    <label>问题9：</label>
-    <br/>
-    <input id="q9" type="text" size="15"><label id="tick9"></label> 		<br/>
-    <input type="button" value="Submit" onclick="f9()">
-	</td>
-  </tr>
-</table>
+	<div class="container">
+		<div class="blurb">
+			<h1>欢迎来到团契</h1>
+			<h2>賓果遊戲 （對對看）</h2>
+			<h3>目的：互相認識 </h3>
+			<p>內容： <br/>
+			內有9個問題，每人先在每一格裡寫下自己的答案 <br/>
+			等宣佈開始後，去找每一格子和自己答案一樣的人，請他們在你的紙格子上簽名 <br/>
+			得到越多人的簽名越好（每一格只需一個簽名就好） <br/>
+			得到最多簽名的人就贏；取前三名，報告你自己的格子的答案和簽名的名字是誰</p>
+		</div><!-- /.blurb -->
+	</div><!-- /.container -->
+	<table>
+	  <tr>
+	    <td>
+	    <label>问题1：</label>
+	    <br/>
+	    <input id="q1" type="text" size="15"><label id="tick1"></label> 		<br/>
+	    <input type="button" value="Submit" onclick="f1()">
+		</td>
+	    <td>
+	    <label>问题2：</label>
+	    <br/>
+	    <input id="q2" type="text" size="15"><label id="tick2"></label> 		<br/>
+	    <input type="button" value="Submit" onclick="f2()">
+		</td>
+	    <td>
+	    <label>问题3：</label>
+	    <br/>
+	    <input id="q3" type="text" size="15"><label id="tick3"></label> 		<br/>
+	    <input type="button" value="Submit" onclick="f3()">
+		</td>
+	    <td>
+	  </tr>
+	  <tr>
+	    <td>
+	    <label>问题4：</label>
+	    <br/>
+	    <input id="q4" type="text" size="15"><label id="tick4"></label> 		<br/>
+	    <input type="button" value="Submit" onclick="f4()">
+		</td>
+	    <td>
+	    <label>问题5：</label>
+	    <br/>
+	    <input id="q5" type="text" size="15"><label id="tick5"></label> 		<br/>
+	    <input type="button" value="Submit" onclick="f5()">
+		</td>
+	    <td>
+	    <label>问题6：</label>
+	    <br/>
+	    <input id="q6" type="text" size="15"><label id="tick6"></label> 		<br/>
+	    <input type="button" value="Submit" onclick="f6()">
+		</td>
+	  </tr>
+	  <tr>
+	    <td>
+	    <label>问题7：</label>
+	    <br/>
+	    <input id="q7" type="text" size="15"><label id="tick7"></label> 		<br/>
+	    <input type="button" value="Submit" onclick="f7()">
+		</td>
+	    <td>
+	    <label>问题8：</label>
+	    <br/>
+	    <input id="q8" type="text" size="15"><label id="tick8"></label> 		<br/>
+	    <input type="button" value="Submit" onclick="f8()">
+		</td>
+	    <td>
+	    <label>问题9：</label>
+	    <br/>
+	    <input id="q9" type="text" size="15"><label id="tick9"></label> 		<br/>
+	    <input type="button" value="Submit" onclick="f9()">
+		</td>
+	  </tr>
+	</table>
 
 
 <script>
