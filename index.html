@@ -3,7 +3,6 @@
 <head>
 	<title>Church Ice Breaking</title>
 	<!-- link to main stylesheet -->
-	<link rel="stylesheet" href="css/main.css">
 	<style>
 	    table {
 	      font-family: arial, sans-serif;
@@ -34,7 +33,7 @@
 			<h2>破冰游戏：對對看</h2>
 			<h3>目的：增加彼此的認識 </h3>
 			<p>內容： <br/>
-			- 每个人先填写自己的名字生日，然后你会有自己的code，按照提供的Example签名<br/>
+			- 每个人先填写自己的名字生日，然后你会有自己的code，按照提供的Examples输入签名<br/>
 			- 內有9個問題，每人先在每一格裡寫下自己的答案，submit后会有&#9989; 然后改不到答案<br/>
 			- 等宣佈開始後，去找每一格子和自己答案一樣的人，請他們在你的格子上簽名 <br/>
 			- 得到越多人的簽名越好（每一格只需一個簽名就好） <br/>
@@ -42,23 +41,26 @@
 		</div><!-- /.blurb -->
 	</div><!-- /.container -->
 	<div>
-		<label>你的名字: </label><label id="name"></label>
-		<input type="text" name="name" placeholder="e.g. 家扬">
+		<label>你的名字: </label>
+		<input type="text" id="name" placeholder="e.g. 家扬">
 		<br/>
-		<label>生日 - Month:</label><label id="name"></label>
+		<label>生日 - Month:</label>
 		<input type="number" id="month" min="1" max="12">
-		<label>Day:</label><label id="name"></label>
+		<label>Day:</label>
 		<input type="number" id="day" min="1" max="31">
 		<br/>
 		<input type="button" id="btnzodiac" value="Confirm" onclick="zodiac()">
 		<br/>
-		Example: <br/>
-		& # (your code) ; 0512家扬<br/>
-		（不需要空格）
+		<label>Your Code: </label><br/>
+        <label id="code" style="font-size: 36px;color:red"></label>
 		<br/>
-		<label>Your Code: </label><label id="code"></label>
+		<label>你的签名: </label><br/>
+        <label id="signature" style="font-size: 36px;"></label>
+        <br/>
+        Example: <br/>
+		<label style="color:red">& # (your code) ; 512家扬</label><br/>
+		--不需要空格--
 		<br/>
-		<label>你的签名: </label><label id="signature"></label>
 	</div>
 	<br/>
 	<table>
@@ -195,8 +197,11 @@
 			</td>
 		</tr>
 	</table>
-	
-	<input type="button" id="end" value="谢谢参与，结束后才要按我&#128540;" onclick="end()">
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<input type="button" id="end" value="bye 谢谢参与，结束后按我mou&#128540;" onclick="end()">
 	<footer id="footer" style="display:none">
 		<p>
 		大专生FINAL加油 社会人工作加油 把一切交托给主
@@ -309,57 +314,62 @@ function s9(){
 }
 	
 function end(){
+ if (document.getElementById('bb9').style.display == 'none'){
  document.getElementById('footer').style.display = 'block';
  document.getElementById('end').style.display = 'none';
+ }
 }
 	
 function zodiac(){
-	var birthmonth = document.getElementById("month").value;
-	var birthday = document.getElementById("day").value;
-	var result = " unknown because you didn't put a valid date.";
+	var birthmonth = document.getElementById('month').value;
+	var birthday = document.getElementById('day').value;
+	var name = document.getElementById('name').value;
+	var tempCode;
 	
-	if (birthmonth == 1&& birthday >= 20 || birthmonth == 2 && birthday <= 18){
-		result = ("Aquarius");
+	if (birthmonth == 1 && birthday >= 20 || birthmonth == 2 && birthday <= 18){
+    		tempCode = '9810';
 	}    
-	if (birthmonth == 2&& birthday >= 19 || birthmonth == 3&& birthday <= 20){
-		result = ("Pisces");
+	else if (birthmonth == 2 && birthday >= 19 || birthmonth == 3 && birthday <= 20){
+    		tempCode = '9811';
 	}
-	if (birthmonth == 3&& birthday >= 21 || birthmonth == 4 && birthday <= 19){
-		result = ("Aries");
+	else if (birthmonth == 3 && birthday >= 21 || birthmonth == 4 && birthday <= 19){
+        	tempCode = '9800';
 	}
-	if (birthmonth == 4&& birthday >= 20|| birthmonth == 5 && birthday <= 20){
-		result = ("Taurus");
+	else if (birthmonth == 4 && birthday >= 20|| birthmonth == 5 && birthday <= 20){
+	    tempCode = '9801';
 	}
-	if (birthmonth == 5&& birthday >= 21 || birthmonth == 6 && birthday <= 20){
-		result = ("Gemini");
+	else if (birthmonth == 5 && birthday >= 21 || birthmonth == 6 && birthday <= 20){
+        	tempCode = '9802';
 	}
-	if (birthmonth == 6&& birthday >= 21 || birthmonth == 7&& birthday <= 22){
-		result = ("Cancer");
+	else if (birthmonth == 6 && birthday >= 21 || birthmonth == 7&& birthday <= 22){
+		tempCode = '9803';
 	}
-	if (birthmonth == 7&& birthday >= 23 || birthmonth == 8 && birthday <= 22){
-		result = ("Leo");
+	else if (birthmonth == 7 && birthday >= 23 || birthmonth == 8 && birthday <= 22){
+		tempCode = '9804';
 	}
-	if (birthmonth == 8 && birthday >= 23 || birthmonth == 9 && birthday <= 22){
-		result = ("Virgo");
+	else if (birthmonth == 8 && birthday >= 23 || birthmonth == 9 && birthday <= 22){
+		tempCode = '9805';
 	}
-	if (birthmonth == 9&& birthday >= 23 || birthmonth == 10&& birthday <= 22){
-		result = ("Libra");
+	else if (birthmonth == 9 && birthday >= 23 || birthmonth == 10&& birthday <= 22){
+		tempCode = '9806';
 	}
-	if (birthmonth == 10 && birthday >= 23|| birthmonth == 11 && birthday <= 21){
-		result = ("Scorpio");
+	else if (birthmonth == 10 && birthday >= 23|| birthmonth == 11 && birthday <= 21){
+		tempCode = '9807';
 	}
-	if (birthmonth == 11 && birthday >= 22 || birthmonth == 12 && birthday <= 21){
-		result = ("Sagittarius");
+	else if (birthmonth == 11 && birthday >= 22 || birthmonth == 12 && birthday <= 21){
+		tempCode = '9808';
 	}
-	if(birthmonth == 12 && birthday >= 22 || birthmonth == 1 && birthday <= 19){
-		result = ("Capricorn");
-	}else if (birthmonth>12||birthday>31){
+	else if(birthmonth == 12 && birthday >= 22 || birthmonth == 1 && birthday <= 19){
+		tempCode = '9809';
+	}else {
 		alert("Please enter an accurate date ! ");
 	}
-	document.getElementById("output").innerHTML= result;
+	if (name !== "" && tempCode !== undefined){
+		document.getElementById('signature').innerHTML = '&#' + tempCode + ';' + birthmonth + birthday + name;
+		document.getElementById('code').innerHTML = tempCode;
+	}
 }
 </script>
 
 </body>
 </html>
-
