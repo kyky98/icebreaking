@@ -51,16 +51,16 @@
 		<br/>
 		<input type="button" id="btnzodiac" value="Confirm" onclick="zodiac()">
 		<br/>
+        Example: <br/>
+		<label style="font-size: 24px;color:red">& # (your code) ; 512家扬</label><br/>
+		--不需要空格--
+		<br/>
 		<label>Your Code: </label><br/>
         <label id="code" style="font-size: 36px;color:red"></label>
 		<br/>
-		<label>你的签名: </label><br/>
+		<label>这是你的签名: </label><br/>
         <label id="signature" style="font-size: 36px;"></label>
         <br/>
-        Example: <br/>
-		<label style="color:red">& # (your code) ; 512家扬</label><br/>
-		--不需要空格--
-		<br/>
 	</div>
 	<br/>
 	<table>
@@ -367,6 +367,10 @@ function zodiac(){
 	if (name !== "" && tempCode !== undefined){
 		document.getElementById('signature').innerHTML = '&#' + tempCode + ';' + birthmonth + birthday + name;
 		document.getElementById('code').innerHTML = tempCode;
+		document.getElementById('btnzodiac').style.display = 'none';
+		document.getElementById("name").readOnly = true;
+		document.getElementById("month").readOnly = true;
+		document.getElementById("day").readOnly = true;
 	}
 }
 </script>
