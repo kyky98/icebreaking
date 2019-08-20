@@ -34,12 +34,33 @@
 			<h2>破冰游戏：對對看</h2>
 			<h3>目的：增加彼此的認識 </h3>
 			<p>內容： <br/>
+			- 每个人先填写自己的名字生日，然后你会有自己的code，按照提供的Example签名<br/>
 			- 內有9個問題，每人先在每一格裡寫下自己的答案，submit后会有&#9989; 然后改不到答案<br/>
-			- 等宣佈開始後，去找每一格子和自己答案一樣的人，請他們在你的紙格子上簽名 <br/>
+			- 等宣佈開始後，去找每一格子和自己答案一樣的人，請他們在你的格子上簽名 <br/>
 			- 得到越多人的簽名越好（每一格只需一個簽名就好） <br/>
 			- 得到最多簽名的人就贏；取前5名，報告你自己的格子的答案和簽名的名字是誰</p>
 		</div><!-- /.blurb -->
 	</div><!-- /.container -->
+	<div>
+		<label>你的名字: </label><label id="name"></label>
+		<input type="text" name="name" placeholder="e.g. 家扬">
+		<br/>
+		<label>生日 - Month:</label><label id="name"></label>
+		<input type="number" id="month" min="1" max="12">
+		<label>Day:</label><label id="name"></label>
+		<input type="number" id="day" min="1" max="31">
+		<br/>
+		<input type="button" id="btnzodiac" value="Confirm" onclick="zodiac()">
+		<br/>
+		Example: <br/>
+		& # (your code) ; 0512家扬<br/>
+		（不需要空格）
+		<br/>
+		<label>Your Code: </label><label id="code"></label>
+		<br/>
+		<label>你的签名: </label><label id="signature"></label>
+	</div>
+	<br/>
 	<table>
 		<tr>
 			<td>
@@ -290,6 +311,52 @@ function s9(){
 function end(){
  document.getElementById('footer').style.display = 'block';
  document.getElementById('end').style.display = 'none';
+}
+	
+function zodiac(){
+	var birthmonth = document.getElementById("month").value;
+	var birthday = document.getElementById("day").value;
+	var result = " unknown because you didn't put a valid date.";
+	
+	if (birthmonth == 1&& birthday >= 20 || birthmonth == 2 && birthday <= 18){
+		result = ("Aquarius");
+	}    
+	if (birthmonth == 2&& birthday >= 19 || birthmonth == 3&& birthday <= 20){
+		result = ("Pisces");
+	}
+	if (birthmonth == 3&& birthday >= 21 || birthmonth == 4 && birthday <= 19){
+		result = ("Aries");
+	}
+	if (birthmonth == 4&& birthday >= 20|| birthmonth == 5 && birthday <= 20){
+		result = ("Taurus");
+	}
+	if (birthmonth == 5&& birthday >= 21 || birthmonth == 6 && birthday <= 20){
+		result = ("Gemini");
+	}
+	if (birthmonth == 6&& birthday >= 21 || birthmonth == 7&& birthday <= 22){
+		result = ("Cancer");
+	}
+	if (birthmonth == 7&& birthday >= 23 || birthmonth == 8 && birthday <= 22){
+		result = ("Leo");
+	}
+	if (birthmonth == 8 && birthday >= 23 || birthmonth == 9 && birthday <= 22){
+		result = ("Virgo");
+	}
+	if (birthmonth == 9&& birthday >= 23 || birthmonth == 10&& birthday <= 22){
+		result = ("Libra");
+	}
+	if (birthmonth == 10 && birthday >= 23|| birthmonth == 11 && birthday <= 21){
+		result = ("Scorpio");
+	}
+	if (birthmonth == 11 && birthday >= 22 || birthmonth == 12 && birthday <= 21){
+		result = ("Sagittarius");
+	}
+	if(birthmonth == 12 && birthday >= 22 || birthmonth == 1 && birthday <= 19){
+		result = ("Capricorn");
+	}else if (birthmonth>12||birthday>31){
+		alert("Please enter an accurate date ! ");
+	}
+	document.getElementById("output").innerHTML= result;
 }
 </script>
 
