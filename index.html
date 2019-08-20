@@ -33,7 +33,7 @@
 			<h2>破冰游戏：對對看</h2>
 			<h3>目的：增加彼此的認識 </h3>
 			<p>內容： <br/>
-			- 每个人先填写自己的名字生日，然后你会有自己的code，按照提供的Examples输入签名<br/>
+			- 每个人先填写自己的名字生日，然后你会有自己的code，按照提供的Example输入签名<br/>
 			- 內有9個問題，每人先在每一格裡寫下自己的答案，submit后会有&#9989; 然后改不到答案<br/>
 			- 等宣佈開始後，去找每一格子和自己答案一樣的人，請他們在你的格子上簽名 <br/>
 			- 得到越多人的簽名越好（每一格只需一個簽名就好） <br/>
@@ -51,16 +51,25 @@
 		<br/>
 		<input type="button" id="btnzodiac" value="Confirm" onclick="zodiac()">
 		<br/>
+		<label id="eg" style="display:none"><label>Your Code: </label><br/>
+        <i><label id="code" style="font-size: 24px;color:red"></label></i>
+		<br/>
+		
+        ==================================<br/>
         Example: <br/>
-		<label style="font-size: 24px;color:red">& # (your code) ; 512家扬</label><br/>
-		--不需要空格--
-		<br/>
-		<label>Your Code: </label><br/>
-        <label id="code" style="font-size: 36px;color:red"></label>
-		<br/>
-		<label>这是你的签名: </label><br/>
-        <label id="signature" style="font-size: 36px;"></label>
+        你的名字：<label style="color:darkred">家扬</label> <br/>
+        生日 - Month：<label style="color:orange">5</label> Day：<label style="color:orange">12</label> <br/>
+        输入方式：<br/>
+		<label style="font-size: 24px;color:darkred">&#<label style="color:red"><i>(your code)</i></label>;<label style="color:orange">512</label>家扬</label>
         <br/>
+        -------bracket ( )不用放-------
+        <br/>
+        ==================================<br/>
+        <br/>
+        <label>你的签名: </label><br/>
+        <label id="signature" style="font-size: 30px;"></label>
+        <br/>
+        </label>
 	</div>
 	<br/>
 	<table>
@@ -367,10 +376,11 @@ function zodiac(){
 	if (name !== "" && tempCode !== undefined){
 		document.getElementById('signature').innerHTML = '&#' + tempCode + ';' + birthmonth + birthday + name;
 		document.getElementById('code').innerHTML = tempCode;
-		document.getElementById('btnzodiac').style.display = 'none';
-		document.getElementById("name").readOnly = true;
-		document.getElementById("month").readOnly = true;
-		document.getElementById("day").readOnly = true;
+        document.getElementById('btnzodiac').style.display = 'none';
+        document.getElementById("name").readOnly = true;
+        document.getElementById("month").readOnly = true;
+        document.getElementById("day").readOnly = true;
+        document.getElementById('eg').style.display = 'block';
 	}
 }
 </script>
