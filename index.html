@@ -60,7 +60,7 @@
         你的名字：<label style="color:darkred">家扬</label> <br/>
         生日 - Month：<label style="color:orange">5</label> Day：<label style="color:orange">12</label> <br/>
         输入方式：<br/>
-		<label style="font-size: 24px;color:darkred">&#<label style="color:red"><i>(your code)</i></label>_<label style="color:orange">512</label>家扬</label>
+		<label style="font-size: 24px;color:darkred">&#<label style="color:red"><i>(your code)</i></label>-<label style="color:orange">512</label>家扬</label>
         <br/>
         -------bracket ( )不用放-------
         <br/>
@@ -374,7 +374,7 @@ function zodiac(){
 		alert("Please enter an accurate date ! ");
 	}
 	if (name !== "" && tempCode !== undefined){
-		document.getElementById('signature').innerHTML = '&#' + tempCode + '_' + birthmonth + birthday + name;
+		document.getElementById('signature').innerHTML = '&#' + tempCode + '-' + birthmonth + birthday + name;
 		document.getElementById('code').innerHTML = tempCode;
         document.getElementById('btnzodiac').style.display = 'none';
         document.getElementById("name").readOnly = true;
